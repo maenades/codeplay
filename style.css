@@ -1,3 +1,10 @@
+@font-face{
+font-family: 'Montserrat', sans-serif;
+src: url('font/montserrat.ttf');
+}
+
+
+
 body{
     background-image: url(images/musicien.jpg);
     background-repeat: no-repeat;
@@ -5,86 +12,121 @@ body{
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
-    font-family: sans-serif;
 }
+
 
 a{
     text-decoration: none !important;
 }
 
-.menu{
-    background-color: #333333;
-    overflow: hidden;
-    color : white;
-    text-decoration: none;
-    margin: 0;
-    padding: 0;
-}
 
 
-.menu a{
-    float: left;
-    display: block;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 20px 20px;
-    text-decoration: none;
-    font-size: 14px;
-}
+/* Menu */
 
-
-.menu a:hover {
-    color: red;
-    text-decoration: none;
-}
-
-.intro{
-    margin-top: 150px;
-}
-
-.titre{
+.logo{
     color: white;
+    font-size: 20px;
+}
+
+.logo:hover{
+    color: #8ae2d1;
+}
+
+.navbar{
+    background-color: rgba(00, 00, 00, 0.5);
+}
+
+
+.menu{
+    margin-top: 25px;
+    font-family: "Montserrat";
+    float: right;
+    color: white;
+    text-transform: uppercase;
+    font-size: 12px;
+    height: 40px;
+}
+
+
+.barremenu{
+    padding: 10px 10px 10px 10px;
+    transition: 1s;
+    border: solid 1px transparent;
+    text-transform: uppercase;
+}
+
+.barremenu:hover{
+    color: #8ae2d1;
+}
+
+a:hover, a:focus, a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+
+
+/* Texte Home */
+
+.texte1, h3{
+    font-size: 70px;
+    margin-top: 200px;
     text-align: center;
+    color: white;
+}
+
+.texte2, h3{
+    text-transform: uppercase;
+    font-size: 25px;
+    text-align: center;
+    color: white;
     margin-left: 350px;
     margin-right: 350px;
 }
 
-.titre h2{
-    font-size: 90px;
-}
-
-.titre p{
-    font-size: 30px;
-}
 
 
-.cta-wrap{
-    font-size: 10px;
+/* CTA Home */
+
+.bouton{
     text-align: center;
-    text-decoration: none;
+    margin-top: 30px; 
 }
 
-.cta h3{
+.ctaun{
+    padding: 15px 90px 15px 90px;
+    border: solid 1px white;
     color: white;
-    border: solid 2px white;
-    padding : 20px;
-    text-decoration: none;
+    text-transform: uppercase;
+    transition: 1s;
+    font-weight: 700;
+    font-size: 20px;
 }
 
-.cta h3:hover{
-    background: red;
-    text-decoration: none;
+.ctadeux{
+    padding: 15px 80px 15px 80px;
+    border: solid 1px white;
     color: white;
+    text-transform: uppercase;
+    transition: 1s;
+    font-weight: 700;
+    font-size: 20px;
 }
 
+.cta:hover{
+    color: white;
+    background-color: #8ae2d1;
+    border: solid 1px #8ae2d1;
+}
+
+
+
+/* Footer */
 
 .footer{
-    background-color: #333333;
-    overflow: hidden;
-    color : white;
+    background-color: rgba(00, 00, 00, 0.5);
     text-decoration: none;
-    margin: 0;
-    padding: 0;
+    padding-top: 3px;
     position: absolute;
     width: 100%;
     bottom: 0;
@@ -94,15 +136,35 @@ a{
 .footer a{
     float: left;
     display: block;
-    color: #f2f2f2;
+    color: white;
     text-align: center;
-    padding: 10px 10px;
+    padding: 5px 5px 5px 5px;
     text-decoration: none;
-    font-size: 12px;
+    font-size: 10px;
 }
 
 
 .footer a:hover {
-    color: red;
+    color: #8ae2d1;
     text-decoration: none;
+}
+
+
+
+/* Curseur */
+
+.ball {
+  pointer-events: none;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 80%;
+  background: gray;
+  animation: implode 2s ease-in-out;
+  animation-fill-mode: both;
+  opacity: .4;
+}
+
+@keyframes implode {
+  100% {transform: scale(0)}
 }
