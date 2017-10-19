@@ -2,15 +2,6 @@ body{
   background-color: black;
 }
 
-article{
-  color: white;
-  font-weight: bold;
-}
-
-.topnav{
-  margin-bottom: 5%;
-}
-
 
 .title{
   margin-bottom: 5%;
@@ -30,8 +21,6 @@ article{
   font-size: 60px;
   font-weight: bold;
   color:white;
-  color:white;
-  font-family: 'Poiret One', cursive;
   text-align: center;
 }
 
@@ -41,11 +30,12 @@ article{
   justify-content: center;
 }
 
-img:hover{
+.fight:hover{
   opacity:0.5;
 }
 
-/*début effet balle*/
+/* Effet balle*/
+
 .ball {
   pointer-events: none;
   position: absolute;
@@ -53,7 +43,7 @@ img:hover{
   height: 20px;
   border-radius: 80%;
   background: gray;
-  animation: implode 2s ease-in-out;
+  animation: implode 2s  ease-in-out;
   animation-fill-mode: both;
   opacity: .4;
 }
@@ -61,4 +51,4 @@ img:hover{
 @keyframes implode {
   100% {transform: scale(0)}
 }
-/*fin effet balle*/
+

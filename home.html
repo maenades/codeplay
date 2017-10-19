@@ -5,106 +5,63 @@
     <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="style.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="script.js"></script>
   <title>CODEPLAY</title>
-    
-    <script>var coucou= "https://api.airtable.com/v0/appIvyrKWtgosoFZA/musics?api_key=keyRidxBOuv2DSuSe";
-    console.log(coucou);
-    </script>
-    
-    <script>$(document).ready(function(){
-              var mousePos = {};
-
-             function getRandomInt(min, max) {
-               return Math.round(Math.random() * (max - min + 1)) + min;
-             }
-
-              $(window).mousemove(function(e) {
-                mousePos.x = e.pageX;
-                mousePos.y = e.pageY;
-              });
-
-              $(window).mouseleave(function(e) {
-                mousePos.x = -1;
-                mousePos.y = -1;
-              });
-
-              var draw = setInterval(function(){
-                if(mousePos.x > 0 && mousePos.y > 0){
-
-                  var range = 70;
-
-                  var color = "background: #8ae2d1;";
-
-                  var sizeInt = getRandomInt(3, 10);
-                  size = "height: " + sizeInt + "px; width: " + sizeInt + "px;";
-
-                  var left = "left: " + getRandomInt(mousePos.x-range-sizeInt, mousePos.x+range) + "px;";
-
-                  var top = "top: " + getRandomInt(mousePos.y-range-sizeInt, mousePos.y+range) + "px;";
-
-                  var style = left+top+color+size;
-                  $("<div class='ball' style='" + style + "'></div>").appendTo('body').one("webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend", function(){$(this).remove();});
-                }
-              }, 1);
-            });
-    </script>
-    
 </head>
-
-<body>
     
-    <header id="home">
-            <div class="fond row">
-                <div class="col-md-12">
-                    <nav class="navbar navbar-fixed-top menunav">
-                        <div class="container-fluid">
-                            <div class="col-md-2"></div>
-                            <div class="col-md-2">
-                                <a href="#home"><h1 class="logo">CODEPLAY</h1></a>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="menu">
-                                    <a href="#home"><span class="barremenu">Home</span></a>
-                                    <a href="#top"><span class="barremenu">Top</span></a>
-                                    <a href="#votez"><span class="barremenu">Votez</span></a>
-                                    <a href="#about"><span class="barremenu">Qui sommes-nous ?</span></a>
+    
+
+<body id="myhome">
+    
+        
+        <header id="home">
+                <div class="row">
+                    
+                        <nav class="navbar navbar-fixed-top menunav">
+                            <div class="container-fluid">
+                                <div class="col-md-2"></div>
+                                <div class="col-md-2">
+                                    <a href="home.html"><h1 class="logo">CODEPLAY</h1></a>
                                 </div>
+                                <div class="col-md-6">
+                                    <div class="menu">
+                                        <a href="home.html"><span class="barremenu">Home</span></a>
+                                        <a href="top.html"><span class="barremenu">Top</span></a>
+                                        <a href="votez.html"><span class="barremenu">Votez</span></a>
+                                        <a href="about.html"><span class="barremenu">Qui sommes-nous ?</span></a>
+                                    </div>
+                                </div>
+                                <div class="col-md-2"></div>
                             </div>
-                            <div class="col-md-2"></div>
+                        </nav>
+                    
+                        <div class="texte1">
+                        <span>CODEPLAY</span>
                         </div>
-                    </nav>
-                </div>
-                <div class="col-md-12">
-                    <div class="texte1">
-                    <span>CODEPLAY</span>
-                    </div>
-                    <div class="texte2">
-                    <span>Découvrez tous les morceaux préférés des étudiants de l'École Supérieure du Digital</span>
-                    </div>
-                </div>        
-            </div>  
+                        <div class="texte2">
+                        <span>Découvrez tous les morceaux préférés des étudiants de l'École Supérieure du Digital</span>
+                        </div>
+                        
+                </div>  
 
-            <div class="bouton row">  
-                <div class="col-md-4"></div>
-                <div class="col-md-2">
-                    <a href="#home"><span class="cta ctaun">Top</span></a>
+                <div class="bouton row">  
+                    <div class="col-md-3"></div>
+                    <div class="col-md-3">
+                        <a href="top.html"><span class="cta center-block">Top</span></a>
+                    </div>
+                    <div class="col-md-3">
+                        <a href="votez.html"><span class="cta center-block">Votez</span></a>
+                    </div>
+                    <div class="col-md-3"></div>
                 </div>
-                <div class="col-md-2">
-                    <a href="#home"><span class="cta ctadeux">Votez</span></a>
-                </div>
-                <div class="col-md-4"></div>
-            </div>
-                
-                
-    </header>
-    
-    <footer class="footer">
-          <a href="#home">HOME</a>
-          <a href="#top">TOP</a>
-          <a href="#votez">VOTEZ</a>
-          <a href="#about">QUI SOMMES-NOUS ?</a>
-    </footer>
-    
+
+
+        </header>
+
+        <footer class="footer">
+              <a href="home.html">HOME</a>
+              <a href="top.html">TOP</a>
+        </footer>
     
     
 </body>

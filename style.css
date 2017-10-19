@@ -3,15 +3,8 @@ font-family: 'Montserrat', sans-serif;
 src: url('font/montserrat.ttf');
 }
 
-
-
 body{
-    background-image: url(images/musicien.jpg);
-    background-repeat: no-repeat;
-    max-width: 100%;
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
+    background-color: #fd5255;
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -21,17 +14,30 @@ a{
 }
 
 
+/* HOME PAGE */
 
 /* Menu */
 
-.logo{
-    color: white;
-    font-size: 20px;
+#myhome{
+    background-image: url(images/musicien.jpg);
+    background-repeat: no-repeat;
+    max-width: 100%;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
 }
 
-.logo:hover{
-    color: #8ae2d1;
+
+.logo{
+    color: white;
+    font-size: 25px;
 }
+
+
+.logo:hover{
+    color: #fd5255;
+}
+
 
 .navbar{
     background-color: rgba(00, 00, 00, 0.5);
@@ -56,9 +62,11 @@ a{
     text-transform: uppercase;
 }
 
+
 .barremenu:hover{
-    color: #8ae2d1;
+    color: #fd5255;
 }
+
 
 a:hover, a:focus, a {
     color: #ffffff;
@@ -67,34 +75,35 @@ a:hover, a:focus, a {
 
 
 
-/* Texte Home */
+/* Texte */
 
 .texte1, h3{
-    font-size: 70px;
-    margin-top: 220px;
+    font-size: 80px;
+    margin-top: 210px;
     text-align: center;
     color: white;
 }
 
 .texte2, h3{
     text-transform: uppercase;
-    font-size: 25px;
+    font-size: 35px;
     text-align: center;
     color: white;
-    margin-left: 350px;
-    margin-right: 350px;
+    margin-left: 250px;
+    margin-right: 250px;
 }
 
 
 
-/* CTA Home */
+/* CTA */
 
 .bouton{
     text-align: center;
-    margin-top: 30px; 
+    margin-top: 30px;
 }
 
-.ctaun{
+
+.cta{
     padding: 15px 90px 15px 90px;
     border: solid 1px white;
     color: white;
@@ -104,20 +113,11 @@ a:hover, a:focus, a {
     font-size: 20px;
 }
 
-.ctadeux{
-    padding: 15px 80px 15px 80px;
-    border: solid 1px white;
-    color: white;
-    text-transform: uppercase;
-    transition: 1s;
-    font-weight: 700;
-    font-size: 20px;
-}
 
 .cta:hover{
     color: white;
-    background-color: #8ae2d1;
-    border: solid 1px #8ae2d1;
+    background-color: #fd5255;
+    border: solid 1px #fd5255;
 }
 
 
@@ -128,8 +128,8 @@ a:hover, a:focus, a {
     background-color: rgba(00, 00, 00, 0.5);
     text-decoration: none;
     padding-top: 3px;
-    position: absolute;
     width: 100%;
+    position: absolute;
     bottom: 0;
 }
 
@@ -146,13 +146,51 @@ a:hover, a:focus, a {
 
 
 .footer a:hover {
-    color: #8ae2d1;
+    color: #fd5255;
     text-decoration: none;
 }
 
 
 
-/* Curseur */
+/* PAGE TOP */
+
+.title{
+    margin-top: 100px;
+    margin-bottom: 30px;
+}
+
+.title p{
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 35px;
+    text-align: center;
+}
+
+
+.numero{
+    font-size: 45px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    padding-top: 10px;
+}
+
+
+.fight:hover{
+    opacity: 0.5;
+}
+
+
+.label{
+    font-size: 11px;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+
+
+/* Effet curseur*/
 
 .ball {
   pointer-events: none;
@@ -161,7 +199,7 @@ a:hover, a:focus, a {
   height: 20px;
   border-radius: 80%;
   background: gray;
-  animation: implode 2s ease-in-out;
+  animation: implode 2s  ease-in-out;
   animation-fill-mode: both;
   opacity: .4;
 }
