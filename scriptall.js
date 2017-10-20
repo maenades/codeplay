@@ -3,17 +3,12 @@ $(document).ready(function(){
     
     // API
     
-    $.getJSON("https://api.airtable.com/v0/appveB7kaqFJAZwvK/musics?pageSize=4&sort%5B0%5D%5Bfield%5D=likes&sort%5B0%5D%5Bdirection%5D=desc&api_key=keynEUVsj4xIszwi2", function(data) {
+    $.getJSON("https://api.airtable.com/v0/appveB7kaqFJAZwvK/musics?api_key=keynEUVsj4xIszwi2", function(data) {
 
-        
-    // LE PLAYER  
-        
-            rang = 1;
             $.each( data.records, function(index, value) {
                 $("#musiques").append("<div class='row'>\
                                   <div class='col-md-3'></div>\
-                                  <div class='col-md-1 numero'>#"+rang+"</div>\
-                                  <div class='col-md-4 spotify'>\
+                                  <div class='col-md-5 spotify'>\
                                     <iframe src='https://open.spotify.com/embed?uri=" + value.fields.spotifylink + "' width='100%' height='100' frameborder='0' allowtransparency='true'></iframe>\
                                   </div>\
                                   <div class='col-md-1'>\
@@ -22,12 +17,11 @@ $(document).ready(function(){
                                   </div>\
                                   <div class='col-md-3'></div></div>");
 
-              rang = rang + 1;
                 
               });
         });
 
-    
+
     // L'ANIMATION DE LA SOURIS
     
 var mousePos = {};
@@ -78,5 +72,5 @@ $("#musiques").on("click", ".voteImg img", function(){
 });
     
     
-     
+    
 });
